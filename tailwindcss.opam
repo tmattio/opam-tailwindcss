@@ -1,0 +1,24 @@
+opam-version: "2.0"
+synopsis: "TailwindCSS prebuild command line on opam"
+description: """TailwindCSS prebuild command line on opam."""
+maintainer: ["Thibaut Mattio"]
+authors: ["Thibaut Mattio"]
+license: "ISC"
+homepage: "https://github.com/tmattio/opam-tailwindcss"
+doc: "https://ocaml.org/p/tailwindcss"
+bug-reports: "https://github.com/tmattio/opam-tailwindcss/issues"
+build: []
+install: [ 
+  "cp" 
+  "tailwindcss-linux-arm64" {os = "linux" & arch = "arm64"}
+  "tailwindcss-linux-x64" {os = "linux" & arch = "x86_64"}
+  "tailwindcss-macos-arm64" {os = "macos" & arch = "arm64"}
+  "tailwindcss-macos-x64" {os = "macos" & arch = "x86_64"}
+  "tailwindcss-windows-x64.exe" {os = "windows" & arch = "x86_64"}
+  "%{bin}%/tailwindcss"
+]
+available: [
+  ( (os = "linux" & (arch = "x86_64" | arch = "arm64"))
+  | (os = "macos" & (arch = "x86_64" | arch = "arm64"))
+  | (os = "windows" &  arch = "x86_64"))
+]
