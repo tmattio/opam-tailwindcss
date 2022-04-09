@@ -34,6 +34,6 @@ opam install tailwindcss
 
 ## License
 
-Tailwind for Rails is released under the [ISC License](https://opensource.org/licenses/ISC).
+`opam-tailwindcss` is released under the [ISC License](https://opensource.org/licenses/ISC).
 Tailwind CSS is released under the [MIT License](https://opensource.org/licenses/MIT).
 
