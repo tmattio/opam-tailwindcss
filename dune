@@ -1,0 +1,44 @@
+(install
+ (section bin)
+ (files
+  (bin/tailwindcss-linux-arm64 as tailwindcss))
+ (enabled_if
+  (and
+   (= %{architecture} arm64)
+   (= %{system} linux))))
+
+(install
+ (section bin)
+ (files
+  (bin/tailwindcss-linux-x64 as tailwindcss))
+ (enabled_if
+  (and
+   (= %{architecture} amd64)
+   (= %{system} linux))))
+
+(install
+ (section bin)
+ (files
+  (bin/tailwindcss-macos-x64 as tailwindcss))
+ (enabled_if
+  (and
+   (= %{architecture} amd64)
+   (= %{system} macosx))))
+
+(install
+ (section bin)
+ (files
+  (bin/tailwindcss-macos-arm64 as tailwindcss))
+ (enabled_if
+  (and
+   (= %{architecture} arm64)
+   (= %{system} macosx))))
+
+(install
+ (section bin)
+ (files
+  (bin/tailwindcss-macos-x64 as tailwindcss))
+ (enabled_if
+  (and
+   (= %{architecture} amd64)
+   (= %{system} windows))))
