@@ -42,3 +42,8 @@
   (and
    (= %{architecture} amd64)
    (= %{os_type} Win32))))
+
+(rule
+ (alias runtest)
+ (action
+  (run tailwindcss --help)))
