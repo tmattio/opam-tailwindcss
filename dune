@@ -37,8 +37,8 @@
 (install
  (section bin)
  (files
-  (bin/tailwindcss-macos-x64 as tailwindcss))
+  (bin/tailwindcss-windows-x64.exe as tailwindcss.exe))
  (enabled_if
   (and
    (= %{architecture} amd64)
-   (= %{system} windows))))
+   (= %{os_type} Win32))))
