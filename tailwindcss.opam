@@ -15,6 +15,7 @@ install: [
   "bin/tailwindcss-linux-x64" {os = "linux" & arch = "x86_64"}
   "bin/tailwindcss-macos-arm64" {os = "macos" & arch = "arm64"}
   "bin/tailwindcss-macos-x64" {os = "macos" & arch = "x86_64"}
+  "bin/tailwindcss-windows-arm64.exe" {os = "win32" & arch = "arm64"}
   "bin/tailwindcss-windows-x64.exe" {os = "win32" & arch = "x86_64"}
   "%{bin}%/tailwindcss" {os != "win32"}
   "%{bin}%/tailwindcss.exe" {os = "win32"}
@@ -22,5 +23,5 @@ install: [
 available: [
   ( (os = "linux" & (arch = "x86_64" | arch = "arm64"))
   | (os = "macos" & (arch = "x86_64" | arch = "arm64"))
-  | (os = "win32" &  arch = "x86_64"))
+  | (os = "win32" & (arch = "x86_64" | arch = "arm64")))
 ]
