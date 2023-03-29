@@ -11,6 +11,7 @@ curl -LO "${url}/tailwindcss-linux-arm64"
 curl -LO "${url}/tailwindcss-linux-x64"
 curl -LO "${url}/tailwindcss-macos-arm64"
 curl -LO "${url}/tailwindcss-macos-x64"
+curl -LO "${url}/tailwindcss-windows-arm64.exe"
 curl -LO "${url}/tailwindcss-windows-x64.exe"
 cd .. || exit
 
