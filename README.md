@@ -2,7 +2,7 @@
 
 [Tailwind CSS](https://tailwindcss.com) is a an utility-first CSS framework for rapidly building custom user interfaces.
 
-This opam package wraps [the standalone executable version](https://tailwindcss.com/blog/standalone-cli) of the Tailwind CSS 3 framework. These executables are platform specific. Upon installation, opam will automatically pick the correct executable for your platform and install it as a `tailwindcss` binary. Supported platforms are Linux arm64, Linux x64, macOS arm64, macOS x64, and Windows x64.
+This opam package wraps [the standalone executable version](https://tailwindcss.com/blog/standalone-cli) of the Tailwind CSS 3 framework. These executables are platform specific. Upon installation, opam will automatically pick the correct executable for your platform and install it as a `tailwindcss` binary. Supported platforms are Linux arm64, Linux x64, macOS arm64, macOS x64, Windows arm64, and Windows x64.
 
 Once installed, you can execute the binary with:
 
