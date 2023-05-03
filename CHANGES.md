@@ -9,15 +9,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet!
 
+## [3.3.2] - 2023-04-25
+
+### Fixed
+
+- Don’t move unknown pseudo-elements to the end of selectors ([#10943](https://github.com/tailwindlabs/tailwindcss/pull/10943), [#10962](https://github.com/tailwindlabs/tailwindcss/pull/10962))
+- Inherit gradient stop positions when using variants ([#11002](https://github.com/tailwindlabs/tailwindcss/pull/11002))
+- Honor default `to` position of gradient when using implicit transparent colors ([#11002](https://github.com/tailwindlabs/tailwindcss/pull/11002))
+- Ensure `@tailwindcss/oxide` doesn't leak in the stable engine ([#10988](https://github.com/tailwindlabs/tailwindcss/pull/10988))
+- Ensure multiple `theme(spacing[5])` calls with bracket notation in arbitrary properties work ([#11039](https://github.com/tailwindlabs/tailwindcss/pull/11039))
+- Normalize arbitrary modifiers ([#11057](https://github.com/tailwindlabs/tailwindcss/pull/11057))
+
+### Changed
+
+- Drop support for Node.js v12 ([#11089](https://github.com/tailwindlabs/tailwindcss/pull/11089))
+
 ## [3.3.1] - 2023-03-30
 
 ### Fixed
 
-- Try resolving `config.default` before `config` to ensure the config file is resolved correctly ([#10898](https://github.com/tailwindlabs/tailwindcss/pull/10898))
-- Pull pseudo elements outside of `:is` and `:has` when using `@apply` ([#10903](https://github.com/tailwindlabs/tailwindcss/pull/10903))
-- Update the types for the `safelist` config ([#10901](https://github.com/tailwindlabs/tailwindcss/pull/10901))
-- Fix `@tailwindcss/line-clamp` warning ([#10915](https://github.com/tailwindlabs/tailwindcss/pull/10915), [#10919](https://github.com/tailwindlabs/tailwindcss/pull/10919))
-- Fix `process` is not defined error ([#10919](https://github.com/tailwindlabs/tailwindcss/pull/10919))
+- Fix edge case bug when loading a TypeScript config file with webpack ([#10898](https://github.com/tailwindlabs/tailwindcss/pull/10898))
+- Fix variant, `@apply`, and `important` selectors when using `:is()` or `:has()` with pseudo-elements ([#10903](https://github.com/tailwindlabs/tailwindcss/pull/10903))
+- Fix `safelist` config types ([#10901](https://github.com/tailwindlabs/tailwindcss/pull/10901))
+- Fix build errors caused by `@tailwindcss/line-clamp` warning ([#10915](https://github.com/tailwindlabs/tailwindcss/pull/10915), [#10919](https://github.com/tailwindlabs/tailwindcss/pull/10919))
+- Fix "process is not defined" error ([#10919](https://github.com/tailwindlabs/tailwindcss/pull/10919))
 
 ## [3.3.0] - 2023-03-27
 
@@ -2221,7 +2236,8 @@ No release notes
 
 - Everything!
 
-[unreleased]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.1...HEAD
+[unreleased]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.2...HEAD
+[3.3.2]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.1...v3.3.2
 [3.3.1]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.0...v3.3.1
 [3.3.0]: https://github.com/tailwindlabs/tailwindcss/compare/v3.2.7...v3.3.0
 [3.2.7]: https://github.com/tailwindlabs/tailwindcss/compare/v3.2.6...v3.2.7
