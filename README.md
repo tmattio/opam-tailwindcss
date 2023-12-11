@@ -20,8 +20,8 @@ Here is a dune rule that uses the installed binary to generate a CSS file:
     (:input src/ocamlorg_frontend/css/styles.css))
   (action
     (chdir
-    %{workspace_root}
-    (run tailwindcss -c %{config} -i %{input} -o %{target}))))
+      %{workspace_root}
+      (run tailwindcss -c %{config} -i %{input} -o %{target}))))
 ```
 
 ## Installation
@@ -37,3 +37,8 @@ opam install tailwindcss
 `opam-tailwindcss` is released under the [ISC License](https://opensource.org/licenses/ISC).
 Tailwind CSS is released under the [MIT License](https://opensource.org/licenses/MIT).
 
+## Update vendored Tailwindcss executables
+
+The [`update.sh`](./update.sh) script should take care of updating the
+vendored executables. It always modifies the last commit, as not to
+carry copies of the executables multiple times in history.

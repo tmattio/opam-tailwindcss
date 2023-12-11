@@ -19,5 +19,12 @@ tag_name=$(curl -s https://api.github.com/repos/tailwindlabs/tailwindcss/release
 
 curl -L "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/$tag_name/CHANGELOG.md" -o CHANGES.md
 
-git add CHANGES.md bin
+git add bin/
+git commit --amend --no-edit
+
+git add CHANGES.md
 git commit -m "Upgrade to tailwind $tag_name"
+
+git reset --hard @~2
+git cherry-pick ORIG_HEAD~0
+git cherry-pick ORIG_HEAD~1
