@@ -9,6 +9,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet!
 
+## [3.4.1] - 2014-01-05
+
+### Fixed
+
+- Don't remove keyframe stops when using important utilities ([#12639](https://github.com/tailwindlabs/tailwindcss/pull/12639))
+- Don't add spaces to gradients and grid track names when followed by `calc()` ([#12704](https://github.com/tailwindlabs/tailwindcss/pull/12704))
+- Restore old behavior for `class` dark mode strategy ([#12717](https://github.com/tailwindlabs/tailwindcss/pull/12717))
+
+### Added
+
+- Add new `selector` and `variant` strategies for dark mode ([#12717](https://github.com/tailwindlabs/tailwindcss/pull/12717))
+
+### Changed
+
+- Support `rtl` and `ltr` variants on same element as `dir` attribute ([#12717](https://github.com/tailwindlabs/tailwindcss/pull/12717))
+
+## [3.4.0] - 2023-12-19
+
+### Added
+
+- Add `svh`, `lvh`, and `dvh` values to default `height`/`min-height`/`max-height` theme ([#11317](https://github.com/tailwindlabs/tailwindcss/pull/11317))
+- Add `has-*` variants for `:has(...)` pseudo-class ([#11318](https://github.com/tailwindlabs/tailwindcss/pull/11318))
+- Add `text-wrap` utilities including `text-balance` and `text-pretty` ([#11320](https://github.com/tailwindlabs/tailwindcss/pull/11320), [#12031](https://github.com/tailwindlabs/tailwindcss/pull/12031))
+- Extend default `opacity` scale to include all steps of 5 ([#11832](https://github.com/tailwindlabs/tailwindcss/pull/11832))
+- Update Preflight `html` styles to include shadow DOM `:host` pseudo-class ([#11200](https://github.com/tailwindlabs/tailwindcss/pull/11200))
+- Increase default values for `grid-rows-*` utilities from 1–6 to 1–12 ([#12180](https://github.com/tailwindlabs/tailwindcss/pull/12180))
+- Add `size-*` utilities ([#12287](https://github.com/tailwindlabs/tailwindcss/pull/12287))
+- Add utilities for CSS subgrid ([#12298](https://github.com/tailwindlabs/tailwindcss/pull/12298))
+- Add spacing scale to `min-w-*`, `min-h-*`, and `max-w-*` utilities ([#12300](https://github.com/tailwindlabs/tailwindcss/pull/12300))
+- Add `forced-color-adjust` utilities ([#11931](https://github.com/tailwindlabs/tailwindcss/pull/11931))
+- Add `forced-colors` variant ([#11694](https://github.com/tailwindlabs/tailwindcss/pull/11694), [#12582](https://github.com/tailwindlabs/tailwindcss/pull/12582))
+- Add `appearance-auto` utility ([#12404](https://github.com/tailwindlabs/tailwindcss/pull/12404))
+- Add logical property values for `float` and `clear` utilities ([#12480](https://github.com/tailwindlabs/tailwindcss/pull/12480))
+- Add `*` variant for targeting direct children ([#12551](https://github.com/tailwindlabs/tailwindcss/pull/12551))
+
+### Changed
+
+- Simplify the `sans` font-family stack ([#11748](https://github.com/tailwindlabs/tailwindcss/pull/11748))
+- Disable the tap highlight overlay on iOS ([#12299](https://github.com/tailwindlabs/tailwindcss/pull/12299))
+- Improve relative precedence of `rtl`, `ltr`, `forced-colors`, and `dark` variants ([#12584](https://github.com/tailwindlabs/tailwindcss/pull/12584))
+
+## [3.3.7] - 2023-12-18
+
+### Fixed
+
+- Fix support for container query utilities with arbitrary values ([#12534](https://github.com/tailwindlabs/tailwindcss/pull/12534))
+- Fix custom config loading in Standalone CLI ([#12616](https://github.com/tailwindlabs/tailwindcss/pull/12616))
+
 ## [3.3.6] - 2023-12-04
 
 ### Fixed
@@ -2303,7 +2351,10 @@ No release notes
 
 - Everything!
 
-[unreleased]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.6...HEAD
+[unreleased]: https://github.com/tailwindlabs/tailwindcss/compare/v3.4.1...HEAD
+[3.4.1]: https://github.com/tailwindlabs/tailwindcss/compare/v3.4.0...v3.4.1
+[3.4.0]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.7...v3.4.0
+[3.3.7]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.6...v3.3.7
 [3.3.6]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.5...v3.3.6
 [3.3.5]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.4...v3.3.5
 [3.3.4]: https://github.com/tailwindlabs/tailwindcss/compare/v3.3.3...v3.3.4
