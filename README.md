@@ -35,11 +35,22 @@ file:
 
 ## Installation
 
+You may use an opam [pin-depends][] to depend on this package. Prefer
+the `.tar.gz` version to have a lighter download.
+
+```
+pin-depends: [
+  ["tailwindcss.dev" "https://github.com/tmattio/opam-tailwindcss/archive/e5bb6361a50c7cc5cad802311e609336583ca08f.tar.gz"]
+]
+```
+
 You can install `opam-tailwindcss` using `opam`:
 
 ``` sh
 opam install tailwindcss
 ```
+
+[pin-depends]: https://opam.ocaml.org/doc/Manual.html#opamfield-pin-depends
 
 ## License
 
