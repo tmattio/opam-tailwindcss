@@ -4,7 +4,12 @@ command -v curl >/dev/null 2>&1 || exit
 command -v jq   >/dev/null 2>&1 || exit
 command -v git  >/dev/null 2>&1 || exit
 
-url='https://github.com/tailwindlabs/tailwindcss/releases/latest/download'
+if [ -n "$1" ]; then
+    tag_name="$1"
+else
+    tag_name=$(curl -s https://api.github.com/repos/tailwindlabs/tailwindcss/releases/latest | jq -r .tag_name)
+fi
+url="https://github.com/tailwindlabs/tailwindcss/releases/download/$tag_name"
 
 cd bin || exit
 curl -LO "${url}/tailwindcss-linux-arm64"
@@ -14,8 +19,6 @@ curl -LO "${url}/tailwindcss-macos-x64"
 curl -LO "${url}/tailwindcss-windows-arm64.exe"
 curl -LO "${url}/tailwindcss-windows-x64.exe"
 cd .. || exit
-
-tag_name=$(curl -s https://api.github.com/repos/tailwindlabs/tailwindcss/releases/latest | jq -r .tag_name)
 
 curl -L "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/$tag_name/CHANGELOG.md" -o CHANGES.md
 
